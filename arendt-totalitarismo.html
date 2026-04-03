@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah Arendt: el análisis del totalitarismo — Historia de la Filosofía · IES Alquipir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #FAF9F5;
+            --bg-secondary: #F0EDE6;
+            --bg-card: #FFFFFF;
+            --text-primary: #2D2B28;
+            --text-secondary: #6B6560;
+            --text-tertiary: #9B9590;
+            --accent: #D97757;
+            --accent-hover: #C4603F;
+            --accent-light: rgba(217, 119, 87, 0.08);
+            --accent-light-hover: rgba(217, 119, 87, 0.14);
+            --blue-accent: #3B82B6;
+            --blue-light: rgba(59, 130, 182, 0.08);
+            --green-accent: #4A9D6E;
+            --green-light: rgba(74, 157, 110, 0.08);
+            --purple-accent: #7C5CBF;
+            --purple-light: rgba(124, 92, 191, 0.08);
+            --gold-accent: #B8860B;
+            --gold-light: rgba(184, 134, 11, 0.06);
+            --slate-accent: #4A6278;
+            --slate-light: rgba(74, 98, 120, 0.07);
+            --border: rgba(0, 0, 0, 0.06);
+            --border-hover: rgba(0, 0, 0, 0.12);
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-lg: 0 4px 16px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-xl: 0 8px 32px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-lg: 16px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.75;
+            min-height: 100vh;
+            font-size: 19px;
+        }
+
+        /* ═══ TOPBAR ═══ */
+        .topbar {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250, 249, 245, 0.92);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 24px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .topbar-left { display: flex; align-items: center; gap: 12px; }
+        .topbar-logo { font-family: 'Instrument Serif', serif; font-size: 20px; color: var(--accent); letter-spacing: -0.5px; }
+        .topbar-divider { width: 1px; height: 20px; background: var(--border-hover); }
+        .topbar-section { font-size: 14px; color: var(--text-secondary); font-weight: 500; }
+        .btn-home {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 16px; background: var(--accent); color: #fff;
+            border: none; border-radius: var(--radius-sm);
+            font-family: inherit; font-size: 13px; font-weight: 600;
+            cursor: pointer; text-decoration: none;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .btn-home:hover { background: var(--accent-hover); transform: translateY(-1px); }
+        .btn-home svg { width: 16px; height: 16px; }
+
+        /* ═══ HERO ═══ */
+        .hero { max-width: 1200px; margin: 0 auto; padding: 56px 24px 40px; text-align: center; }
+        .hero-overline {
+            display: inline-block; font-size: 12px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent);
+            margin-bottom: 16px; padding: 6px 14px;
+            background: var(--accent-light); border-radius: 20px;
+        }
+        .hero h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(32px, 5.5vw, 52px); font-weight: 400;
+            line-height: 1.15; color: var(--text-primary);
+            margin-bottom: 20px; letter-spacing: -0.5px;
+        }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        .hero-subtitle {
+            font-size: 20px; color: var(--text-secondary);
+            max-width: 800px; margin: 0 auto 28px; line-height: 1.6;
+        }
+        .hero-meta {
+            display: flex; align-items: center; justify-content: center;
+            gap: 20px; flex-wrap: wrap; font-size: 13px; color: var(--text-tertiary);
+        }
+        .hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+        /* ═══ INTRO QUOTE ═══ */
+        .intro-quote {
+            max-width: 1200px; margin: 0 auto 48px; padding: 28px 32px;
+            background: var(--gold-light); border-left: 4px solid var(--gold-accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-family: 'Instrument Serif', serif; font-size: 22px;
+            font-style: italic; color: var(--text-primary); line-height: 1.6;
+        }
+        .intro-quote cite {
+            display: block; font-family: 'DM Sans', sans-serif;
+            font-style: normal; font-size: 14px; color: var(--text-tertiary);
+            margin-top: 12px; font-weight: 500;
+        }
+
+        /* ═══ CONTENT ═══ */
+        .content { max-width: 1200px; margin: 0 auto; padding: 0 24px 48px; }
+        .section-block { margin-bottom: 48px; }
+        .section-block-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+        .section-number {
+            font-family: 'Instrument Serif', serif; font-size: 32px;
+            color: var(--accent); opacity: 0.5; line-height: 1; min-width: 32px;
+        }
+        .section-label h2 {
+            font-family: 'Instrument Serif', serif; font-size: 28px;
+            font-weight: 400; color: var(--text-primary); line-height: 1.2;
+        }
+        .section-label .overline {
+            font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2px; color: var(--accent);
+        }
+        .text-content { font-size: 19px; color: var(--text-primary); line-height: 1.8; }
+        .text-content p { margin-bottom: 16px; }
+        .text-content strong { color: var(--text-primary); font-weight: 600; }
+
+        /* ═══ CARDS ═══ */
+        .cards-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px; margin-bottom: 48px;
+        }
+        .card-btn {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 24px; cursor: pointer;
+            text-align: left; transition: all 0.25s ease;
+            display: flex; flex-direction: column; gap: 8px;
+            position: relative; overflow: hidden; font-family: inherit;
+        }
+        .card-btn:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .card-btn .card-icon { font-size: 28px; margin-bottom: 4px; }
+        .card-btn .card-title { font-family: 'Instrument Serif', serif; font-size: 20px; color: var(--text-primary); line-height: 1.3; }
+        .card-btn .card-desc { font-size: 16px; color: var(--text-secondary); line-height: 1.5; }
+        .card-btn .card-arrow { position: absolute; top: 20px; right: 20px; font-size: 18px; color: var(--accent); transition: transform 0.2s; }
+        .card-btn:hover .card-arrow { transform: translateX(3px); }
+        .card-btn.blue   { border-left: 3px solid var(--blue-accent); }
+        .card-btn.blue:hover   { background: var(--blue-light); }
+        .card-btn.green  { border-left: 3px solid var(--green-accent); }
+        .card-btn.green:hover  { background: var(--green-light); }
+        .card-btn.purple { border-left: 3px solid var(--purple-accent); }
+        .card-btn.purple:hover { background: var(--purple-light); }
+        .card-btn.gold   { border-left: 3px solid var(--gold-accent); }
+        .card-btn.gold:hover   { background: var(--gold-light); }
+        .card-btn.accent { border-left: 3px solid var(--accent); }
+        .card-btn.accent:hover { background: var(--accent-light); }
+        .card-btn.slate  { border-left: 3px solid var(--slate-accent); }
+        .card-btn.slate:hover  { background: var(--slate-light); }
+
+        /* ═══ MODAL ═══ */
+        .modal-overlay {
+            display: none; position: fixed; inset: 0; z-index: 500;
+            background: rgba(0,0,0,0.45); backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            justify-content: center; align-items: center; padding: 24px;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        .modal-box {
+            background: var(--bg-primary); border-radius: var(--radius-lg);
+            max-width: 920px; width: 100%; max-height: 85vh; overflow-y: auto;
+            box-shadow: var(--shadow-xl); position: relative; transition: all 0.3s ease;
+        }
+        .modal-box.fullscreen { max-width: 100%; max-height: 100%; height: 100vh; border-radius: 0; }
+        .modal-topbar {
+            position: sticky; top: 0; z-index: 10;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 14px 24px; background: rgba(250, 249, 245, 0.95);
+            backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);
+        }
+        .modal-topbar-title { font-family: 'Instrument Serif', serif; font-size: 18px; color: var(--text-primary); }
+        .modal-topbar-actions { display: flex; gap: 8px; }
+        .btn-modal-action {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 36px; height: 36px; border: 1px solid var(--border);
+            border-radius: var(--radius-sm); background: var(--bg-card);
+            color: var(--text-secondary); cursor: pointer; transition: all 0.2s; font-family: inherit;
+        }
+        .btn-modal-action:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-secondary); }
+        .btn-modal-action svg { width: 18px; height: 18px; }
+        .modal-content { padding: 32px; }
+        .modal-content h3 { font-family: 'Instrument Serif', serif; font-size: 28px; font-weight: 400; margin-bottom: 20px; color: var(--text-primary); line-height: 1.3; }
+        .modal-content h4 { font-size: 19px; font-weight: 600; margin: 24px 0 10px; color: var(--text-primary); }
+        .modal-content p { margin-bottom: 14px; font-size: 19px; line-height: 1.8; color: var(--text-primary); }
+        .modal-content ul, .modal-content ol { margin: 10px 0 18px 20px; font-size: 19px; line-height: 1.8; }
+        .modal-content li { margin-bottom: 6px; }
+        .modal-content .highlight-box {
+            background: var(--accent-light); border-left: 3px solid var(--accent);
+            padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 18px 0; font-size: 18px;
+        }
+        .modal-content .highlight-box.blue  { background: var(--blue-light);   border-left-color: var(--blue-accent); }
+        .modal-content .highlight-box.slate { background: var(--slate-light);  border-left-color: var(--slate-accent); }
+        .modal-content .quote-box {
+            background: var(--gold-light); border-left: 3px solid var(--gold-accent);
+            padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 18px 0; font-family: 'Instrument Serif', serif;
+            font-style: italic; font-size: 20px; line-height: 1.6;
+        }
+        .modal-content .quote-box cite { display: block; font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 14px; color: var(--text-tertiary); margin-top: 8px; }
+        .modal-content .concept-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 16px 0 20px; }
+        .modal-content .concept-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+        .modal-content .concept-item strong { display: block; font-size: 17px; margin-bottom: 4px; color: var(--accent); }
+        .modal-content .concept-item span { font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
+        .modal-content .thinker-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 14px 0; }
+        .modal-content .thinker-card h4 { margin-top: 0; color: var(--accent); }
+        .modal-content .thinker-card .dates { font-size: 14px; color: var(--text-tertiary); margin-bottom: 8px; }
+        .modal-content table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+        .modal-content th { background: var(--bg-secondary); padding: 10px 14px; text-align: left; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); border-bottom: 2px solid var(--border); }
+        .modal-content td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 16px; }
+        .modal-content td:first-child { font-weight: 600; font-size: 14px; color: var(--text-secondary); background: var(--bg-secondary); width: 28%; }
+
+        /* ═══ PAGE OVERLAY ═══ */
+        .page-overlay {
+            display: none; position: fixed; inset: 0; z-index: 400;
+            background: var(--bg-primary); overflow-y: auto;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .page-overlay.active { display: block; opacity: 1; }
+        .page-topbar {
+            position: sticky; top: 0; z-index: 10;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 12px 24px; background: rgba(250, 249, 245, 0.95);
+            backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);
+        }
+        .page-topbar-left { display: flex; align-items: center; gap: 12px; }
+        .btn-back {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 14px; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); font-family: inherit; font-size: 13px; font-weight: 500;
+            color: var(--text-secondary); cursor: pointer; transition: all 0.2s; text-decoration: none;
+        }
+        .btn-back:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-secondary); }
+        .btn-back svg { width: 16px; height: 16px; }
+        .page-content { max-width: 1000px; margin: 0 auto; padding: 40px 24px 60px; }
+        .page-content h2 { font-family: 'Instrument Serif', serif; font-size: 36px; font-weight: 400; margin-bottom: 24px; line-height: 1.2; }
+        .page-content h3 { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; margin: 32px 0 14px; color: var(--text-primary); }
+        .page-content h4 { font-size: 19px; font-weight: 600; margin: 24px 0 10px; }
+        .page-content p { margin-bottom: 14px; font-size: 19px; line-height: 1.8; }
+        .page-content ul, .page-content ol { margin: 10px 0 18px 22px; font-size: 19px; line-height: 1.8; }
+        .page-content li { margin-bottom: 6px; }
+        .page-content .highlight-box {
+            background: var(--accent-light); border-left: 3px solid var(--accent);
+            padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 18px 0;
+        }
+        .page-content .highlight-box.blue  { background: var(--blue-light);   border-left-color: var(--blue-accent); }
+        .page-content .highlight-box.green { background: var(--green-light);  border-left-color: var(--green-accent); }
+        .page-content .highlight-box.slate { background: var(--slate-light);  border-left-color: var(--slate-accent); }
+        .page-content .quote-box {
+            background: var(--gold-light); border-left: 3px solid var(--gold-accent);
+            padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 18px 0;
+            font-family: 'Instrument Serif', serif; font-style: italic; font-size: 20px; line-height: 1.6;
+        }
+        .page-content .quote-box cite { display: block; font-family: 'DM Sans', sans-serif; font-style: normal; font-size: 14px; color: var(--text-tertiary); margin-top: 8px; }
+        .page-content .thinker-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin: 14px 0; }
+        .page-content .thinker-card h4 { margin-top: 0; color: var(--accent); }
+        .page-content .thinker-card .dates { font-size: 14px; color: var(--text-tertiary); margin-bottom: 8px; }
+        .page-content .concept-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 16px 0 20px; }
+        .page-content .concept-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; }
+        .page-content .concept-item strong { display: block; font-size: 17px; margin-bottom: 4px; color: var(--accent); }
+        .page-content .concept-item span { font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
+
+        /* ═══ FORO ═══ */
+        .foro-section { max-width: 1200px; margin: 0 auto 48px; padding: 0 24px; }
+        .foro-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+        .foro-card-image { flex-shrink: 0; width: 180px; height: 80px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); border-radius: var(--radius); }
+        .foro-card-text { flex: 1; min-width: 260px; }
+        .foro-card-text h3 { font-family: 'Instrument Serif', serif; font-size: 24px; font-weight: 400; margin-bottom: 10px; }
+        .foro-card-text p { font-size: 17px; color: var(--text-secondary); margin-bottom: 16px; }
+        .step-list { list-style: none; margin: 0 0 20px 0; }
+        .step-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; font-size: 16px; color: var(--text-secondary); }
+        .step-number { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+        .btn-classroom { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #1a73e8; color: #fff; border: none; border-radius: var(--radius-sm); font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+        .btn-classroom:hover { background: #1557b0; transform: translateY(-1px); }
+        .btn-classroom svg { width: 20px; height: 20px; }
+
+        /* ═══ DIVIDER / FOOTER ═══ */
+        .divider { max-width: 1200px; margin: 0 auto 40px; padding: 0 24px; }
+        .divider-line { border: none; border-top: 1px solid var(--border); }
+        .footer { text-align: center; padding: 32px 24px 40px; font-size: 13px; color: var(--text-tertiary); border-top: 1px solid var(--border); }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        .footer-phi { font-family: 'Instrument Serif', serif; font-size: 28px; color: var(--accent); opacity: 0.35; margin-bottom: 8px; }
+
+        /* ═══ REVEAL ═══ */
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 640px) {
+            body { font-size: 17px; }
+            .hero { padding: 40px 16px 32px; }
+            .hero h1 { font-size: 28px; }
+            .content { padding: 0 16px 40px; }
+            .modal-content { padding: 24px 18px; }
+            .modal-content p, .modal-content ul, .modal-content ol { font-size: 17px; }
+            .page-content { padding: 28px 16px 48px; }
+            .page-content p, .page-content ul, .page-content ol { font-size: 17px; }
+            .foro-card { padding: 24px; flex-direction: column; align-items: flex-start; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .topbar { padding: 10px 16px; }
+            .topbar-section { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+    <div class="topbar-left">
+        <span class="topbar-logo">φ</span>
+        <div class="topbar-divider"></div>
+        <span class="topbar-section">Historia de la Filosofía · 2º Bachillerato</span>
+    </div>
+    <a class="btn-home" href="https://pacofilo.github.io/filoalquipir/" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Página principal
+    </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <span class="hero-overline">Siglo XX · Filosofía política</span>
+    <h1>El análisis del <em>totalitarismo</em>:<br>el pensamiento de <em>Hannah Arendt</em></h1>
+    <p class="hero-subtitle">Los orígenes del nazismo y el estalinismo, la estructura del terror total, la banalidad del mal y la recuperación de la política como espacio de libertad y pluralidad humana.</p>
+    <div class="hero-meta">
+        <span>📚 Historia de la Filosofía</span>
+        <span>🎓 2º Bachillerato</span>
+        <span>🏫 IES Alquipir · Cehegín</span>
+    </div>
+</section>
+
+<!-- INTRO QUOTE -->
+<div class="intro-quote reveal">
+    «El totalitarismo no surge de la maldad humana sino de la <em>ausencia de pensamiento</em>: de la incapacidad de ponerse en el lugar del otro y juzgar por uno mismo.»
+    <cite>— Hannah Arendt, <em>Eichmann en Jerusalén</em> (1963)</cite>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+    <!-- SECTION 01 -->
+    <div class="section-block reveal">
+        <div class="section-block-header">
+            <div class="section-number">01</div>
+            <div class="section-label">
+                <span class="overline">Contexto y punto de partida</span>
+                <h2>El siglo de los totalitarismos</h2>
+            </div>
+        </div>
+        <div class="text-content">
+            <p>Arendt no elabora su filosofía desde la distancia serena del gabinete académico: la escribe desde la experiencia de quien ha vivido en carne propia el antisemitismo, la persecución nazi, el exilio y la apatridia. Para comprender su pensamiento es imprescindible conocer el tiempo histórico que lo hizo urgente y necesario. Pulsa en cada tarjeta:</p>
+        </div>
+    </div>
+
+    <div class="cards-grid">
+        <button class="card-btn blue reveal" onclick="openModal('modal-contexto')">
+            <span class="card-icon">🌍</span>
+            <span class="card-title">El contexto histórico</span>
+            <span class="card-desc">La Europa de entreguerras, el ascenso del nazismo y el estalinismo, el Holocausto y el colapso de los derechos humanos.</span>
+            <span class="card-arrow">→</span>
+        </button>
+
+        <button class="card-btn gold reveal" onclick="openModal('modal-vida')">
+            <span class="card-icon">📜</span>
+            <span class="card-title">Vida y obra</span>
+            <span class="card-desc">De Königsberg a Nueva York: la biografía de una apátrida que hizo de la experiencia del siglo XX materia filosófica.</span>
+            <span class="card-arrow">→</span>
+        </button>
+
+        <button class="card-btn green reveal" onclick="openModal('modal-influencias')">
+            <span class="card-icon">🧩</span>
+            <span class="card-title">Influencias filosóficas</span>
+            <span class="card-desc">Heidegger y el existencialismo, Jaspers y la comunicación filosófica, la tradición republicana y Kant.</span>
+            <span class="card-arrow">→</span>
+        </button>
+    </div>
+
+    <!-- SECTION 02 -->
+    <div class="section-block reveal">
+        <div class="section-block-header">
+            <div class="section-number">02</div>
+            <div class="section-label">
+                <span class="overline">Las grandes teorías</span>
+                <h2>El pensamiento de Arendt en profundidad</h2>
+            </div>
+        </div>
+        <div class="text-content">
+            <p>El edificio intelectual de Arendt se construye sobre tres grandes pilares: el análisis histórico-político del totalitarismo, la teoría de la banalidad del mal y una filosofía de la acción política que rescata el significado genuino de la vida pública. Explora cada uno:</p>
+        </div>
+    </div>
+
+    <div class="cards-grid">
+        <button class="card-btn accent reveal" onclick="openPage('page-origenes')">
+            <span class="card-icon">🔎</span>
+            <span class="card-title">Los orígenes del totalitarismo</span>
+            <span class="card-desc">El antisemitismo moderno, el imperialismo y el racismo como elementos que convergen en los movimientos totalitarios del siglo XX.</span>
+            <span class="card-arrow">→</span>
+        </button>
+
+        <button class="card-btn slate reveal" onclick="openPage('page-estructura')">
+            <span class="card-icon">🕸️</span>
+            <span class="card-title">La estructura del régimen totalitario</span>
+            <span class="card-desc">Terror e ideología como pilares del totalitarismo. Los campos de concentración como laboratorios de la dominación total.</span>
+            <span class="card-arrow">→</span>
+        </button>
+
+        <button class="card-btn purple reveal" onclick="openPage('page-banalidad')">
+            <span class="card-icon">🪞</span>
+            <span class="card-title">La banalidad del mal</span>
+            <span class="card-desc">El juicio a Eichmann. El mal no como monstruosidad sino como irreflexión: la ausencia de pensamiento como condición del crimen burocrático.</span>
+            <span class="card-arrow">→</span>
+        </button>
+
+        <button class="card-btn green reveal" onclick="openModal('modal-vidaactiva')">
+            <span class="card-icon">🏛️</span>
+            <span class="card-title">La vida activa y la política</span>
+            <span class="card-desc">Labor, trabajo y acción. La política como espacio de libertad, pluralidad y natalidad frente a la dominación totalitaria.</span>
+            <span class="card-arrow">→</span>
+        </button>
+    </div>
+
+    <!-- SECTION 03 -->
+    <div class="section-block reveal">
+        <div class="section-block-header">
+            <div class="section-number">03</div>
+            <div class="section-label">
+                <span class="overline">Para repasar y debatir</span>
+                <h2>Conceptos, legado y actualidad</h2>
+            </div>
+        </div>
+        <div class="text-content">
+            <p>Antes de participar en el foro, consolida el vocabulario de Arendt y reflexiona sobre la vigencia de su análisis en el mundo contemporáneo:</p>
+        </div>
+    </div>
+
+    <div class="cards-grid">
+        <button class="card-btn blue reveal" onclick="openModal('modal-glosario')">
+            <span class="card-icon">📖</span>
+            <span class="card-title">Glosario arendtiano</span>
+            <span class="card-desc">Definiciones de los conceptos esenciales: totalitarismo, banalidad del mal, natalidad, pluralidad, acción, espacio público y más.</span>
+            <span class="card-arrow">→</span>
+        </button>
+
+        <button class="card-btn purple reveal" onclick="openModal('modal-legado')">
+            <span class="card-icon">🌐</span>
+            <span class="card-title">Legado y actualidad</span>
+            <span class="card-desc">¿Puede volver el totalitarismo? El pensamiento de Arendt ante los populismos, la vigilancia digital y la erosión democrática del siglo XXI.</span>
+            <span class="card-arrow">→</span>
+        </button>
+
+        <button class="card-btn accent reveal" onclick="openModal('modal-preguntas')">
+            <span class="card-icon">❓</span>
+            <span class="card-title">Preguntas para el foro</span>
+            <span class="card-desc">Cuestiones de reflexión filosófica para orientar tu participación en el debate de Kialo Edu.</span>
+            <span class="card-arrow">→</span>
+        </button>
+    </div>
+
+</div>
+
+<div class="divider"><hr class="divider-line"></div>
+
+<!-- FORO -->
+<div class="foro-section reveal">
+    <div class="foro-card">
+        <div class="foro-card-image">
+            <svg width="180" height="48" viewBox="0 0 180 48" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path d="M12 24 Q12 14 22 10" stroke="#4A9EDB" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M12 24 Q12 17 20 14" stroke="#4A9EDB" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M12 24 Q12 20 18 18" stroke="#4A9EDB" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <path d="M12 24 L16 22" stroke="#4A9EDB" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <circle cx="12" cy="24" r="3" fill="#4A9EDB"/>
+                    <text x="32" y="30" font-family="'DM Sans', sans-serif" font-size="24" font-weight="700" fill="#2D2B28">kialo</text>
+                    <text x="105" y="30" font-family="'DM Sans', sans-serif" font-size="24" font-weight="400" fill="#6B6560">edu</text>
+                </g>
+            </svg>
+        </div>
+        <div class="foro-card-text">
+            <h3>Participa en el foro de debate</h3>
+            <p>Tras revisar los contenidos de esta página, participarás en un foro de discusión en <strong>Kialo Edu</strong> sobre si el análisis arendtiano del totalitarismo sigue siendo válido para comprender las amenazas políticas del siglo XXI.</p>
+            <ul class="step-list">
+                <li><span class="step-number">1</span><span>Lee atentamente todos los contenidos de esta web.</span></li>
+                <li><span class="step-number">2</span><span>Entra en <strong>Google Classroom</strong> con tu cuenta del centro.</span></li>
+                <li><span class="step-number">3</span><span>En Classroom encontrarás el <strong>enlace al foro de Kialo Edu</strong> para participar en el debate.</span></li>
+            </ul>
+            <a class="btn-classroom" href="https://classroom.google.com" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                Ir a Google Classroom
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="divider"><hr class="divider-line"></div>
+<footer class="footer">
+    <div class="footer-phi">φ</div>
+    <p>Departamento de Filosofía · <a href="https://pacofilo.github.io/filoalquipir/" target="_blank">IES Alquipir</a> · Cehegín, Murcia<br>Francisco Jiménez Amor</p>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     MODALS
+═══════════════════════════════════════════════════════════════════ -->
+
+<!-- MODAL: Contexto histórico -->
+<div class="modal-overlay" id="modal-contexto">
+    <div class="modal-box">
+        <div class="modal-topbar">
+            <span class="modal-topbar-title">El contexto histórico</span>
+            <div class="modal-topbar-actions">
+                <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+                <button class="btn-modal-action" onclick="closeModal('modal-contexto')" title="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <h3>El siglo de los totalitarismos</h3>
+
+            <h4>La crisis de la Europa liberal (1914–1933)</h4>
+            <p>La Primera Guerra Mundial (1914-1918) destruye la confianza en el progreso indefinido que había caracterizado el optimismo liberal del siglo XIX. Cuatro años de guerra industrial de exterminio masivo revelan que la modernidad no lleva necesariamente hacia adelante: puede llevar al abismo. La posguerra trae consigo inflación galopante, desempleo estructural, crisis de los partidos tradicionales y una profunda desorientación de las masas desarraigadas por la industrialización y la guerra.</p>
+            <p>Es en este clima de descomposición del orden liberal donde brotan los movimientos totalitarios. En Italia, Mussolini toma el poder en 1922. En la Unión Soviética, Lenin y luego Stalin construyen un Estado partido único que suprime toda oposición. En Alemania, la República de Weimar —debilitada por la humillación del Tratado de Versalles, la hiperinflación de 1923 y la Gran Depresión de 1929— no puede resistir el ascenso de Hitler, que toma el poder en enero de 1933.</p>
+
+            <h4>El nazismo y el Holocausto</h4>
+            <p>El régimen nacionalsocialista representa, para Arendt, algo <em>cualitativamente nuevo</em> en la historia política: no simplemente una tiranía más cruel, sino un sistema cuyo objetivo declarado no es dominar a un pueblo sino <strong>destruir categorías enteras de seres humanos</strong> por el mero hecho de existir. La solución final —el exterminio sistemático de seis millones de judíos europeos en los campos de la muerte— es el símbolo máximo de esta novedad radical del terror totalitario.</p>
+
+            <h4>El colapso de los derechos humanos</h4>
+            <p>Uno de los análisis más originales de Arendt es el que dedica a los apátridas y refugiados de entreguerras. Cuando millones de personas pierden su ciudadanía y quedan fuera de toda comunidad política, quedan también fuera de toda protección legal. Esto revela una paradoja devastadora en la doctrina de los derechos humanos: estos derechos se proclaman como «inalienables» y pertenecientes al ser humano por el mero hecho de serlo, pero en la práctica solo los garantiza la pertenencia a un Estado nacional. Sin Estado, no hay derechos.</p>
+
+            <div class="highlight-box">
+                <strong>La paradoja de los derechos humanos:</strong> Arendt concluye que el verdadero derecho fundamental no es ninguno de los derechos clásicos (libertad, propiedad, seguridad), sino el <strong>«derecho a tener derechos»</strong>: el derecho a pertenecer a una comunidad política que garantice el resto.
+            </div>
+
+            <h4>Los dos totalitarismos</h4>
+            <div class="concept-grid">
+                <div class="concept-item">
+                    <strong>Nazismo (1933–1945)</strong>
+                    <span>Ideología racial. Antisemitismo como núcleo. Exterminio de judíos, gitanos, discapacitados, homosexuales. Estado-partido fundado en el terror y la propaganda.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Estalinismo (1924–1953)</strong>
+                    <span>Ideología de clase. Partido comunista como vanguardia. Purgas masivas, gulags, colectivización forzada. Terror que devora también a los propios revolucionarios.</span>
+                </div>
+            </div>
+            <p>Arendt fue muy criticada por equiparar nazismo y estalinismo: para muchos, el primero era cualitativamente más criminal. Pero su tesis no es que sean idénticos, sino que ambos comparten la <strong>estructura</strong> del terror total, aunque sus ideologías y víctimas difieran.</p>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL: Vida y obra -->
+<div class="modal-overlay" id="modal-vida">
+    <div class="modal-box">
+        <div class="modal-topbar">
+            <span class="modal-topbar-title">Vida y obra</span>
+            <div class="modal-topbar-actions">
+                <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+                <button class="btn-modal-action" onclick="closeModal('modal-vida')" title="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <h3>Hannah Arendt: una vida en el exilio</h3>
+
+            <div class="thinker-card">
+                <h4>Hannah Arendt (1906–1975)</h4>
+                <p class="dates">Linden, Hannover · Nueva York</p>
+                <p>Filósofa y teórica política alemana de origen judío. Una de las pensadoras más influyentes del siglo XX. Estudiosa del totalitarismo, de la condición humana y de la naturaleza de la política. Pensadora independiente que rehusó toda etiqueta de escuela o partido.</p>
+            </div>
+
+            <h4>Formación y años alemanes (1906–1933)</h4>
+            <p>Nace en el seno de una familia judía laica y culta. Estudia filosofía en Marburgo con <strong>Martin Heidegger</strong> —con quien mantiene una relación amorosa y una influencia filosófica profunda y problemática— y en Heidelberg con <strong>Karl Jaspers</strong>, que se convertirá en su maestro y amigo de por vida. Su tesis doctoral versa sobre el concepto de amor en San Agustín. Con la llegada de Hitler al poder en 1933, Arendt es detenida brevemente por la Gestapo. Escapa a París, donde trabaja para organizaciones judías de ayuda a refugiados.</p>
+
+            <h4>El exilio y la apatridia (1933–1951)</h4>
+            <p>En 1941, ante la ocupación nazi de Francia, huye a los Estados Unidos con su segundo marido, Heinrich Blücher. Se instala en Nueva York sin ciudadanía, trabajando como periodista, editora y conferenciante. Esta experiencia de apatridia —de quedar fuera de toda comunidad política— será decisiva para su pensamiento sobre los derechos humanos y la política. En 1951 obtiene la ciudadanía estadounidense y publica <em>Los orígenes del totalitarismo</em>, que la lanza a la fama intelectual internacional.</p>
+
+            <h4>La madurez intelectual (1951–1975)</h4>
+            <p>Ocupa una cátedra en la New School for Social Research de Nueva York. En 1961 viaja a Jerusalén como corresponsal de <em>The New Yorker</em> para cubrir el juicio al criminal de guerra nazi Adolf Eichmann. Sus crónicas, publicadas como <em>Eichmann en Jerusalén</em> (1963), levantan una enorme polémica. Hasta su muerte en 1975, mientras redacta su obra filosófica final (<em>La vida del espíritu</em>), Arendt seguirá siendo una voz incómoda e inclasificable.</p>
+
+            <h4>Obras fundamentales</h4>
+            <table>
+                <thead><tr><th>Obra</th><th>Año</th><th>Contenido central</th></tr></thead>
+                <tbody>
+                    <tr><td>Los orígenes del totalitarismo</td><td>1951</td><td>Análisis histórico-filosófico del nazismo y el estalinismo.</td></tr>
+                    <tr><td>La condición humana</td><td>1958</td><td>Labor, trabajo y acción. La política como espacio de libertad.</td></tr>
+                    <tr><td>Entre el pasado y el futuro</td><td>1961</td><td>Ensayos sobre autoridad, libertad, educación y tradición.</td></tr>
+                    <tr><td>Eichmann en Jerusalén</td><td>1963</td><td>La banalidad del mal. El crimen como irreflexión burocrática.</td></tr>
+                    <tr><td>Sobre la revolución</td><td>1963</td><td>La Revolución Francesa vs. la americana. La libertad política.</td></tr>
+                    <tr><td>La vida del espíritu</td><td>1978</td><td>Pensar, querer, juzgar. Obra póstuma inacabada.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL: Influencias filosóficas -->
+<div class="modal-overlay" id="modal-influencias">
+    <div class="modal-box">
+        <div class="modal-topbar">
+            <span class="modal-topbar-title">Influencias filosóficas</span>
+            <div class="modal-topbar-actions">
+                <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+                <button class="btn-modal-action" onclick="closeModal('modal-influencias')" title="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <h3>Los maestros y las tradiciones de Arendt</h3>
+            <p>Arendt es una pensadora difícil de clasificar precisamente porque sus influencias son heterodoxas y las asimila de forma crítica y creativa, nunca como discípula que repite un dogma.</p>
+
+            <h4>Martin Heidegger: el ser y la existencia</h4>
+            <p>Arendt estudió con Heidegger en Marburgo entre 1924 y 1926. De él aprendió que la filosofía debe partir de las estructuras concretas de la existencia humana, no de abstracciones metafísicas. La noción heideggeriana de «ser-en-el-mundo» y la atención a la temporalidad y a la finitud humana marcan profundamente su pensamiento. Sin embargo, la adhesión de Heidegger al nazismo en 1933 supuso para Arendt un problema filosófico y personal que nunca resolvió del todo: ¿cómo pudo el mayor filósofo de su tiempo apoyar al peor movimiento político? Esa pregunta está en el corazón de su teoría sobre la relación entre pensamiento y acción política.</p>
+
+            <h4>Karl Jaspers: la comunicación y la responsabilidad</h4>
+            <p><strong>Karl Jaspers</strong> fue su director de tesis y el maestro con quien mantuvo una correspondencia y amistad de por vida. De Jaspers tomó la idea de que la filosofía es esencialmente <em>comunicación</em>: el pensamiento se desarrolla en el diálogo, no en el monólogo solitario. También la noción de <strong>responsabilidad colectiva</strong>: en su obra <em>El problema de la culpa alemana</em> (1946), Jaspers distingue entre culpabilidad criminal, política, moral y metafísica, una distinción que Arendt recoge y desarrolla.</p>
+
+            <h4>La tradición republicana y Kant</h4>
+            <p>La teoría política de Arendt bebe de la tradición republicana clásica —Aristóteles, Cicerón— y de la experiencia de la democracia ateniense y la república romana. La política no es administración de intereses (como creen los liberales) ni transformación de la economía (como creen los marxistas): es el espacio en el que los ciudadanos iguales pero distintos actúan y deliberan juntos. De <strong>Kant</strong> toma especialmente la facultad del <em>juicio</em> —desarrollada en la <em>Crítica del juicio</em>— y la idea del <em>pensamiento ampliado</em>: la capacidad de ponerse en el punto de vista del otro, que es para Arendt la condición de un juicio político y moral genuino.</p>
+
+            <div class="highlight-box">
+                <strong>Una pensadora inclasificable:</strong> Arendt rechazó siempre ser identificada con el feminismo, el liberalismo, el conservadurismo o el marxismo. Se definía a sí misma simplemente como «teórica política» y consideraba que toda etiqueta ideológica era un obstáculo para pensar con honestidad.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL: La vida activa -->
+<div class="modal-overlay" id="modal-vidaactiva">
+    <div class="modal-box">
+        <div class="modal-topbar">
+            <span class="modal-topbar-title">La vida activa y la política</span>
+            <div class="modal-topbar-actions">
+                <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+                <button class="btn-modal-action" onclick="closeModal('modal-vidaactiva')" title="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <h3>La condición humana: labor, trabajo y acción</h3>
+            <p>En <em>La condición humana</em> (1958) Arendt desarrolla su filosofía de la vida activa (<em>vita activa</em>) como contrapeso positivo al análisis crítico del totalitarismo. Si este destruye la acción y la pluralidad humanas, Arendt quiere rescatar lo que el totalitarismo aplasta. Distingue tres modalidades fundamentales de la actividad humana:</p>
+
+            <div class="concept-grid">
+                <div class="concept-item">
+                    <strong>La labor</strong>
+                    <span>La actividad biológica de sobrevivir: comer, dormir, reproducirse. Es cíclica e interminable. El ser humano como <em>animal laborans</em>, esclavo de sus necesidades naturales.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>El trabajo</strong>
+                    <span>La fabricación de objetos duraderos que constituyen el «mundo» artificial en el que vivimos. El ser humano como <em>homo faber</em>, artesano que deja una huella permanente.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>La acción</strong>
+                    <span>La actividad específicamente política: el discurso y la acción entre iguales en el espacio público. La forma más elevada de vida activa. El ser humano como ser político.</span>
+                </div>
+            </div>
+
+            <h4>La política como espacio de libertad</h4>
+            <p>Para Arendt, la <strong>acción</strong> es la actividad más propiamente humana porque es la única que no puede realizarse en soledad: requiere la presencia de otros, la escena pública. La política no es un mal necesario para gestionar intereses privados (como en el liberalismo) ni un instrumento para transformar la economía (como en el marxismo): es el ámbito en el que los seres humanos se revelan como quiénes son, a través de sus palabras y sus actos, y crean algo nuevo en el mundo.</p>
+
+            <h4>Natalidad y pluralidad</h4>
+            <p>Dos categorías son capitales en esta filosofía política. La <strong>natalidad</strong> es la capacidad humana de comenzar algo radicalmente nuevo: cada ser humano, al nacer, introduce una novedad absoluta en el mundo. Esta capacidad de iniciar —de no estar determinado por lo que ya existe— es la condición de la acción y la libertad política. La <strong>pluralidad</strong> designa el hecho de que el mundo humano está habitado por seres que son iguales en su condición de personas pero radicalmente distintos en sus perspectivas, historias y juicios. La pluralidad no es un problema que la política deba superar: es su condición de posibilidad.</p>
+
+            <div class="quote-box">
+                «La acción y el discurso son las actividades a través de las cuales los hombres se presentan unos a otros, no como objetos físicos, sino como hombres. Esta aparición, a diferencia de la mera existencia corporal, se basa en la iniciativa, pero es una iniciativa de la que ningún ser humano puede abstenerse sin dejar de ser humano.»
+                <cite>— Hannah Arendt, <em>La condición humana</em> (1958)</cite>
+            </div>
+
+            <div class="highlight-box blue">
+                <strong>La antítesis del totalitarismo:</strong> El totalitarismo destruye exactamente lo que Arendt valora: aplasta la pluralidad (todos deben pensar lo mismo), liquida el espacio público (sustituido por la propaganda y el terror) y reduce a los seres humanos a su dimensión animal (la labor, la mera supervivencia). La <em>vita activa</em> es, en este sentido, la respuesta filosófica positiva al totalitarismo.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL: Glosario -->
+<div class="modal-overlay" id="modal-glosario">
+    <div class="modal-box">
+        <div class="modal-topbar">
+            <span class="modal-topbar-title">Glosario arendtiano</span>
+            <div class="modal-topbar-actions">
+                <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+                <button class="btn-modal-action" onclick="closeModal('modal-glosario')" title="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <h3>Conceptos fundamentales del pensamiento de Arendt</h3>
+            <div class="concept-grid">
+                <div class="concept-item">
+                    <strong>Totalitarismo</strong>
+                    <span>Forma de gobierno radicalmente nueva que aspira a la dominación total del ser humano mediante el terror y la ideología. Distinto de la tiranía clásica.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Terror</strong>
+                    <span>El principio de gobierno del totalitarismo. No es un instrumento para alcanzar un fin, sino un fin en sí mismo: la destrucción de todo espacio entre los seres humanos.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Ideología totalitaria</strong>
+                    <span>Un sistema de ideas que pretende explicar todo desde un único principio (la raza, la clase) y que exige la adhesión total, eliminando el juicio individual.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Banalidad del mal</strong>
+                    <span>El mal no como demonio ni como monstruo, sino como resultado de la irreflexión: la incapacidad de pensar y juzgar por uno mismo. El funcionario que «cumple órdenes».</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Natalidad</strong>
+                    <span>La capacidad específicamente humana de comenzar algo radicalmente nuevo. Fundamento de la libertad política y la acción. Cada nacimiento es un nuevo comienzo.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Pluralidad</strong>
+                    <span>El hecho de que el mundo está habitado por seres iguales pero distintos. Condición de la política: no hay acción genuina sin reconocimiento del otro como diferente.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Acción</strong>
+                    <span>La actividad política por excelencia: el discurso y la iniciativa entre iguales en el espacio público. La forma más alta de vida activa.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Espacio público</strong>
+                    <span>El ámbito común en el que los ciudadanos se muestran unos a otros a través de sus palabras y actos. El totalitarismo lo destruye; la democracia lo preserva.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Derecho a tener derechos</strong>
+                    <span>El derecho fundamental descubierto por Arendt al analizar a los apátridas: el derecho a pertenecer a una comunidad política que garantice todos los demás derechos.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Pensamiento ampliado</strong>
+                    <span>(Tomado de Kant) La capacidad de pensar desde el punto de vista de los otros. Condición del juicio político y moral genuino. Lo contrario de la irreflexión del mal banal.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Vita activa</strong>
+                    <span>El conjunto de las actividades humanas fundamentales: labor, trabajo y acción. La condición humana en su dimensión activa y mundana.</span>
+                </div>
+                <div class="concept-item">
+                    <strong>Praxis</strong>
+                    <span>La acción política libre, a diferencia de la fabricación técnica (<em>poiesis</em>). No tiene un fin externo a ella misma: su sentido está en el propio actuar en común.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL: Legado y actualidad -->
+<div class="modal-overlay" id="modal-legado">
+    <div class="modal-box">
+        <div class="modal-topbar">
+            <span class="modal-topbar-title">Legado y actualidad</span>
+            <div class="modal-topbar-actions">
+                <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+                <button class="btn-modal-action" onclick="closeModal('modal-legado')" title="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <h3>¿Puede volver el totalitarismo?</h3>
+
+            <h4>Una pensadora más leída que nunca</h4>
+            <p>Tras décadas de influencia académica principalmente en los círculos de teoría política, Arendt ha experimentado un extraordinario renacimiento de interés público a partir de la primera y segunda décadas del siglo XXI. Las ventas de <em>Los orígenes del totalitarismo</em> se dispararon en 2017, tras la llegada de Trump al poder en Estados Unidos. Sus conceptos —banalidad del mal, totalitarismo, derecho a tener derechos— circulan hoy en el debate político cotidiano con una familiaridad que ella misma no vivió.</p>
+
+            <h4>¿Son los populismos del siglo XXI totalitarismos?</h4>
+            <p>La pregunta más urgente que suscita el pensamiento de Arendt hoy es si los movimientos autoritarios y populistas contemporáneos constituyen una forma de totalitarismo en sentido arendtiano. La respuesta cuidadosa es: <em>no exactamente, pero con elementos inquietantes</em>. El totalitarismo en sentido estricto requiere el terror sistemático, los campos y la destrucción total del espacio público, algo que —por ahora— los populismos no alcanzan. Sin embargo, varios elementos del análisis de Arendt resultan perturbadoramente actuales:</p>
+            <ul>
+                <li>El <strong>desprecio por los hechos</strong> y la construcción de realidades alternativas mediante la propaganda.</li>
+                <li>La <strong>demonización del «enemigo interno»</strong> (los inmigrantes, las minorías, los «globalistas»).</li>
+                <li>El <strong>ataque sistemático a las instituciones</strong> democráticas: prensa libre, judicatura independiente, partidos de oposición.</li>
+                <li>La <strong>movilización emocional de las masas</strong> a través del miedo y el resentimiento.</li>
+            </ul>
+
+            <h4>La vigilancia digital y la pérdida del espacio privado</h4>
+            <p>Arendt insistió en que tanto el espacio público (político) como el espacio privado (íntimo) son condiciones de la libertad humana. El totalitarismo destruye ambos. La vigilancia digital masiva que caracteriza al capitalismo de plataformas actual —y con mayor intensidad a los sistemas de «crédito social» de regímenes autoritarios— plantea preguntas que Arendt no pudo formular pero que su marco conceptual ayuda a pensar.</p>
+
+            <div class="highlight-box slate">
+                <strong>La lección central de Arendt:</strong> El totalitarismo no surge de repente como un meteorito del cielo: emerge de tendencias que ya estaban presentes en la modernidad —el imperialismo, el racismo, el antisemitismo, la soledad de masa— y que se cristalizan en condiciones de crisis. Reconocer esas tendencias en el presente es la tarea política del pensamiento.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL: Preguntas para el foro -->
+<div class="modal-overlay" id="modal-preguntas">
+    <div class="modal-box">
+        <div class="modal-topbar">
+            <span class="modal-topbar-title">Preguntas para el foro</span>
+            <div class="modal-topbar-actions">
+                <button class="btn-modal-action" onclick="toggleFullscreen(this)" title="Pantalla completa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></button>
+                <button class="btn-modal-action" onclick="closeModal('modal-preguntas')" title="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <h3>Cuestiones para orientar el debate en Kialo Edu</h3>
+            <p>El foro girará en torno a la pregunta central: <strong>¿Es el análisis arendtiano del totalitarismo válido para comprender las amenazas políticas del siglo XXI?</strong> Reflexiona sobre estas cuestiones antes de participar:</p>
+
+            <h4>Sobre la banalidad del mal</h4>
+            <ul>
+                <li>¿Estás de acuerdo con la tesis de que el mal puede surgir no de la maldad sino de la irreflexión y la obediencia ciega? ¿Qué ejemplos actuales te vienen a la mente?</li>
+                <li>¿En qué situaciones cotidianas podríamos ser nosotros mismos «funcionarios del mal» sin saberlo? ¿Cómo evitarlo?</li>
+                <li>¿Puede una persona ser culpable sin haber querido hacer el mal? ¿Qué tipo de culpabilidad sería esa?</li>
+            </ul>
+
+            <h4>Sobre el totalitarismo y la actualidad</h4>
+            <ul>
+                <li>¿Hay regímenes o movimientos políticos actuales que presenten rasgos totalitarios en el sentido de Arendt? ¿Cuáles y por qué?</li>
+                <li>¿La vigilancia digital masiva de las grandes tecnológicas puede compararse con el tipo de control que Arendt atribuye al totalitarismo?</li>
+                <li>¿Crees que la democracia puede degenerar en totalitarismo de forma gradual, sin que haya una «ruptura» clara? ¿Qué señales de alerta deberíamos tener?</li>
+            </ul>
+
+            <h4>Sobre la política y la acción</h4>
+            <ul>
+                <li>Arendt dice que la política es el espacio en el que los seres humanos se realizan plenamente como seres libres y plurales. ¿Compartes esa visión de la política, o la ves más como un mal necesario?</li>
+                <li>¿El «derecho a tener derechos» sigue siendo un problema no resuelto hoy? Piensa en los refugiados, los apátridas, los migrantes sin papeles.</li>
+                <li>¿Qué significa «pensar desde el punto de vista del otro» en la práctica? ¿Es posible y deseable en la vida política cotidiana?</li>
+            </ul>
+
+            <div class="highlight-box blue">
+                <strong>Recuerda:</strong> Argumenta con conceptos filosóficos precisos y ejemplos concretos. Evita las opiniones vagas: apoya cada posición con razones extraídas de lo que has estudiado.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     PAGES
+═══════════════════════════════════════════════════════════════════ -->
+
+<!-- PAGE: Los orígenes del totalitarismo -->
+<div class="page-overlay" id="page-origenes">
+    <div class="page-topbar">
+        <div class="page-topbar-left">
+            <button class="btn-back" onclick="closePage('page-origenes')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Volver
+            </button>
+            <span class="modal-topbar-title">Los orígenes del totalitarismo</span>
+        </div>
+    </div>
+    <div class="page-content">
+        <h2>Los orígenes del totalitarismo</h2>
+
+        <p>Publicada en 1951, <em>Los orígenes del totalitarismo</em> es la obra que lanza a Arendt a la primera fila del pensamiento político internacional. Su tesis central es que el nazismo y el estalinismo no son simples dictaduras más violentas que las anteriores, sino una <strong>forma radicalmente nueva de gobierno</strong>, sin precedente en la historia. Para comprenderla, Arendt rastrea los elementos históricos que confluyen en ella.</p>
+
+        <h3>1. El antisemitismo moderno</h3>
+        <p>Arendt distingue cuidadosamente entre el <strong>antijudaísmo tradicional</strong> —de raíz religiosa, presente en toda la historia cristiana— y el <strong>antisemitismo moderno</strong>, que surge en el siglo XIX como ideología política secular. Esta distinción es fundamental: el antijudaísmo odiaba a los judíos por sus creencias; el antisemitismo moderno los odia por lo que «son», es decir, por su supuesta «raza». Se trata de un odio que no puede ser superado por la conversión o la asimilación.</p>
+        <p>¿Por qué los judíos? Arendt ofrece una explicación histórico-política: los judíos habían estado asociados durante siglos al poder estatal (como prestamistas, financieros, agentes del Estado absolutista). Cuando el Estado-nación liberal triunfa y ya no los necesita para esa función, los judíos quedan en una posición paradójica: son un grupo sin territorio propio, sin Estado, con una identidad que las sociedades nacionales perciben como «extraña» en su seno. Esta vulnerabilidad específica los hace el blanco perfecto para quien necesite un «enemigo» que explique todos los males.</p>
+
+        <div class="quote-box">
+            «El antisemitismo, lejos de ser una reacción irracional ante la presencia de judíos, fue la respuesta a una situación política muy específica en la que los judíos desempeñaban un papel muy concreto.»
+            <cite>— Hannah Arendt, <em>Los orígenes del totalitarismo</em> (1951)</cite>
+        </div>
+
+        <h3>2. El imperialismo y el racismo</h3>
+        <p>El segundo elemento que Arendt analiza es el <strong>imperialismo europeo</strong> del siglo XIX, especialmente el colonialismo africano. La expansión colonial no es simplemente un fenómeno económico: introduce en el pensamiento político europeo la idea de que hay seres humanos que pueden ser tratados como si no fueran plenamente humanos. El <strong>racismo</strong> surge como la ideología que justifica esa diferencia de trato: si hay razas «superiores» e «inferiores», la dominación y el exterminio de las segundas por las primeras puede presentarse como ley de la naturaleza.</p>
+        <p>Arendt señala que las prácticas desarrolladas en las colonias —campos de concentración, trabajo forzado, exterminios masivos— son reimportadas a Europa por los regímenes totalitarios. Lo que se ensayó en el Congo o en el África del Sudoeste alemán con las poblaciones colonizadas, Hitler lo aplicó en Europa con los judíos y otras minorías. Hay una línea de continuidad que el eurocentrismo suele ignorar.</p>
+
+        <h3>3. La soledad de masa y los movimientos totalitarios</h3>
+        <p>El tercer elemento es sociológico y psicológico: la <strong>soledad de masa</strong> que produce la modernidad industrial. Las sociedades modernas generan grandes masas de individuos atomizados, arrancados de sus comunidades tradicionales por la industrialización, el desempleo, la migración. Estas masas no son simplemente «pobres»: son personas que han perdido sus lazos sociales, su sentido de pertenencia y su capacidad de acción colectiva ordinaria. Son el caldo de cultivo perfecto para los movimientos totalitarios, que les ofrecen identidad, comunidad y un sentido de la historia.</p>
+        <p>Los movimientos totalitarios son diferentes de los partidos políticos ordinarios: no buscan conquistar el gobierno para aplicar un programa, sino <strong>transformar radicalmente la sociedad</strong> y al ser humano mismo. Son movimientos que viven del dinamismo, del movimiento perpetuo, de la expansión sin límites: si se detienen, se desintegran. Por eso el totalitarismo no puede «estabilizarse» nunca: necesita siempre nuevos enemigos, nuevas crisis, nuevas conquistas.</p>
+
+        <div class="concept-grid">
+            <div class="concept-item">
+                <strong>Antisemitismo moderno</strong>
+                <span>Ideología racial (no religiosa) que convierte al judío en enemigo absoluto. Base del nazismo.</span>
+            </div>
+            <div class="concept-item">
+                <strong>Imperialismo y racismo</strong>
+                <span>El colonialismo introduce en Europa la práctica del exterminio de pueblos «inferiores» y su justificación ideológica.</span>
+            </div>
+            <div class="concept-item">
+                <strong>Soledad de masa</strong>
+                <span>El aislamiento y el desarraigo del individuo moderno, que lo hace susceptible de ser movilizado por los movimientos totalitarios.</span>
+            </div>
+            <div class="concept-item">
+                <strong>Movimiento totalitario</strong>
+                <span>Organización política que aspira a la dominación total, no solo del gobierno sino de la sociedad entera y de la propia naturaleza humana.</span>
+            </div>
+        </div>
+
+        <h3>4. La novedad radical del totalitarismo</h3>
+        <p>La conclusión más importante de este análisis histórico es que el totalitarismo no puede comprenderse con las categorías políticas heredadas: no es una tiranía, no es una dictadura, no es un despotismo oriental. Es algo genuinamente nuevo. Las tiranías clásicas actúan por el interés del tirano, que quiere mantenerse en el poder. Los totalitarismos actúan conforme a una <strong>ley supuestamente natural o histórica</strong> —la ley de la selección racial, la ley del movimiento histórico de las clases— que trasciende cualquier interés individual, incluido el del propio líder.</p>
+        <p>Esta pretensión de encarnar una ley más profunda que las leyes humanas es lo que hace al totalitarismo tan difícil de resistir desde dentro: cualquier valor humano ordinario —la compasión, la lealtad, la solidaridad— puede ser presentado como obstáculo para el cumplimiento de la gran ley histórica o racial.</p>
+
+        <div class="highlight-box">
+            <strong>Idea clave:</strong> El totalitarismo no es la tiranía llevada a su extremo. Es una forma de gobierno que, por primera vez en la historia, se propone no simplemente dominar a los seres humanos sino <em>transformar su naturaleza</em>, producir un nuevo tipo de hombre conforme a la ideología, y está dispuesto a exterminar a quienes no encajen en ese molde.
+        </div>
+    </div>
+</div>
+
+<!-- PAGE: La estructura del régimen totalitario -->
+<div class="page-overlay" id="page-estructura">
+    <div class="page-topbar">
+        <div class="page-topbar-left">
+            <button class="btn-back" onclick="closePage('page-estructura')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Volver
+            </button>
+            <span class="modal-topbar-title">La estructura del régimen totalitario</span>
+        </div>
+    </div>
+    <div class="page-content">
+        <h2>La estructura del régimen totalitario</h2>
+        <p>Una vez en el poder, el movimiento totalitario construye un tipo de Estado radicalmente diferente de cualquier forma de gobierno conocida. Arendt analiza sus dos pilares fundamentales —el <strong>terror</strong> y la <strong>ideología</strong>— y señala en los <strong>campos de concentración</strong> su expresión más extrema y reveladora.</p>
+
+        <h3>1. Terror e ideología: los dos pilares del totalitarismo</h3>
+        <p>Arendt sostiene que el totalitarismo tiene un principio de gobierno propio, diferente al de otras formas políticas. Mientras la tiranía se gobierna por el miedo y la república por la virtud cívica, el totalitarismo se gobierna por la combinación inseparable de <strong>terror</strong> e <strong>ideología</strong>.</p>
+        <p>El <strong>terror</strong> totalitario es diferente del terror ordinario. El terror ordinario es un instrumento: se usa para amedrentar a los opositores y se detiene cuando ha logrado su objetivo. El terror totalitario no es un instrumento sino un <strong>fin en sí mismo</strong>: no cesa cuando los enemigos son eliminados, porque siempre se fabrican nuevos enemigos. Su objetivo no es intimidar a la gente sino destruir cualquier espacio entre los individuos, convertir a las masas en un solo cuerpo compacto, sin fisuras, sin posibilidad de acción espontánea.</p>
+        <p>La <strong>ideología</strong> totalitaria no es simplemente propaganda o un conjunto de creencias políticas. Es un sistema cerrado que pretende explicar la totalidad de la historia y el presente desde un único principio (la raza, la clase), y que exige una adhesión total que no deje espacio para el juicio individual. La ideología no necesita ser creída sinceramente: basta con que sea actuada. Lo que el totalitarismo destruye no es la creencia, sino la <strong>capacidad de juicio</strong>.</p>
+
+        <div class="quote-box">
+            «El ideal del gobierno totalitario no es el dominio tiránico sobre los hombres, sino un sistema en el que los hombres son superfluos. El poder total solo puede lograrse y conservarse en un mundo de reflejos condicionados, de marionetas sin el más leve rastro de espontaneidad.»
+            <cite>— Hannah Arendt, <em>Los orígenes del totalitarismo</em> (1951)</cite>
+        </div>
+
+        <h3>2. La organización del Estado totalitario</h3>
+        <p>Arendt describe la estructura del Estado totalitario como una <strong>cebolla</strong>: capas concéntricas que rodean al líder en el centro. Esta estructura no obedece a ningún principio de eficiencia administrativa, sino a la lógica del movimiento perpetuo y la dominación total. La multiplicación de organismos con competencias solapadas —en el nazismo: partido, SS, SA, policía secreta, burocracia estatal— no es disfuncional: produce una inseguridad permanente que hace imposible cualquier resistencia organizada.</p>
+        <p>El <strong>líder</strong> ocupa una posición singular: no es simplemente el jefe del gobierno, sino quien encarna la ley histórica o racial y cuya voluntad, por tanto, está por encima de cualquier norma positiva. La obediencia al líder no es obediencia a una persona sino a la ley que él encarna. Esto explica que los crímenes totalitarios no necesiten ser ocultados: pueden incluso proclamarse, porque se presentan como el cumplimiento de un destino superior.</p>
+
+        <h3>3. Los campos de concentración</h3>
+        <p>Para Arendt, los campos de concentración son la institución central del totalitarismo —más que el partido, más que la policía secreta— porque en ellos se muestra con mayor claridad lo que el totalitarismo pretende realmente: no simplemente matar o explotar a sus víctimas, sino <strong>destruir la persona humana</strong> en ellas.</p>
+        <p>Arendt distingue tres estadios en ese proceso de destrucción. El primero es la <strong>muerte de la persona jurídica</strong>: los prisioneros de los campos son despojados de toda condición legal, quedan fuera de cualquier protección del derecho. El segundo es la <strong>muerte de la persona moral</strong>: los mecanismos de los campos están diseñados para hacer imposible el martirio, el acto heroico, la resistencia digna. Se pone a los prisioneros en situaciones en las que deben elegir entre males igualmente atroces, de modo que no puedan mantener ningún código moral. El tercero es la <strong>muerte de la persona única</strong>: la individuación, la identidad, la espontaneidad son destruidas mediante el hambre extrema, el agotamiento, la uniformización, hasta reducir al ser humano a mero cuerpo biológico que reacciona automáticamente.</p>
+
+        <div class="thinker-card">
+            <h4>Los campos como «laboratorios»</h4>
+            <p>Arendt denomina a los campos «laboratorios» del totalitarismo porque en ellos se ensaya científicamente si es posible convertir a los seres humanos en algo menos que humanos: en meras funciones biológicas sin espontaneidad, juicio ni identidad. La conclusión del experimento es que esto <em>es</em> posible, y esa posibilidad es lo más perturbador del totalitarismo.</p>
+        </div>
+
+        <h3>4. La superfluidad humana</h3>
+        <p>La categoría más oscura y profunda del análisis de Arendt es la de <strong>superfluidad</strong>. El totalitarismo no solo mata a sus víctimas: las convierte en «superfluas», en seres humanos que desde la perspectiva del sistema no debían haber existido nunca. Este concepto conecta el análisis político con el ético y el existencial: si algo ha demostrado el siglo XX, es que bajo ciertas condiciones los seres humanos pueden ser tratados —y pueden sentirse— como completamente prescindibles.</p>
+        <p>La respuesta de Arendt a esta superfluidad es filosófica y política al mismo tiempo: la <strong>natalidad</strong>. Frente a la fábrica de muerte que convierte seres humanos en cadáveres, Arendt reivindica que cada ser humano es un nuevo comienzo, una novedad absoluta en el mundo que nunca puede reducirse a su utilidad o prescindibilidad.</p>
+
+        <div class="highlight-box green">
+            <strong>Síntesis:</strong> El totalitarismo no es simplemente un gobierno muy malo o muy violento. Es un sistema que pretende abolir la condición humana misma —la libertad, la pluralidad, la espontaneidad— y reducir a los seres humanos a su dimensión puramente biológica. Por eso los campos son su institución más representativa: en ellos se intenta, literalmente, deshumanizar.
+        </div>
+    </div>
+</div>
+
+<!-- PAGE: La banalidad del mal -->
+<div class="page-overlay" id="page-banalidad">
+    <div class="page-topbar">
+        <div class="page-topbar-left">
+            <button class="btn-back" onclick="closePage('page-banalidad')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Volver
+            </button>
+            <span class="modal-topbar-title">La banalidad del mal</span>
+        </div>
+    </div>
+    <div class="page-content">
+        <h2>La banalidad del mal</h2>
+        <p>La expresión «<strong>banalidad del mal</strong>» es quizá la más conocida y más polémica de toda la obra de Arendt. Aparece en el subtítulo de <em>Eichmann en Jerusalén: un estudio sobre la banalidad del mal</em> (1963), las crónicas que Arendt publicó en <em>The New Yorker</em> sobre el juicio al criminal de guerra nazi Adolf Eichmann, celebrado en Jerusalén en 1961.</p>
+
+        <h3>1. El caso Eichmann</h3>
+        <p><strong>Adolf Eichmann</strong> (1906-1962) fue el alto funcionario de las SS encargado de la logística de la «solución final»: la organización de los transportes en tren que llevaron a millones de judíos europeos a los campos de exterminio. Capturado en Argentina por el Mossad israelí en 1960 y trasladado a Jerusalén, fue juzgado, condenado a muerte y ejecutado en 1962.</p>
+        <p>Arendt esperaba encontrar en él un monstruo, un fanático antisemita que había actuado movido por un odio profundo e ideológico. Lo que encontró la desconcertó profundamente: un hombre mediocre, burocrático, que hablaba en clichés, incapaz de pensar por sí mismo, que insistía repetidamente en que «simplemente cumplía órdenes» y que en ningún momento había actuado contra su conciencia porque su conciencia le decía que debía obedecer la ley y a sus superiores.</p>
+
+        <div class="quote-box">
+            «El mal extremo solo es posible donde estas raíces [del pensamiento] han sido extirpadas. Donde el pensamiento no deja que nada arraigue bajo su propio escrutinio, allí el viento puede llevarse a los hombres a hacer lo que quiera.»
+            <cite>— Hannah Arendt, <em>Los orígenes del totalitarismo</em>, prólogo a la tercera edición</cite>
+        </div>
+
+        <h3>2. La tesis: el mal como irreflexión</h3>
+        <p>La tesis de Arendt es tan sencilla como perturbadora: <strong>Eichmann no era un monstruo</strong>. No era demoniaco, no era fanático, no era sádico. Era, en sus propias palabras, un «hombre normal» que hacía su trabajo, que obedecía órdenes, que ascendía en el escalafón. Y precisamente esa normalidad era lo más aterrador: porque revelaba que los crímenes más enormes de la historia no habían requerido de monstruos, sino de personas corrientes que habían suspendido su capacidad de juicio moral.</p>
+        <p>La banalidad del mal no significa que el mal sea trivial o sin importancia. Significa exactamente lo contrario: que el mal puede surgir, a escala monstruosa, sin ninguna intención malvada explícita, sin ningún demonio interior, simplemente por la <strong>ausencia de pensamiento</strong>. Eichmann no pensó en lo que hacía; no se preguntó qué significaba enviar a cientos de miles de personas a la muerte; no intentó ponerse en el lugar de sus víctimas. Simplemente cumplió.</p>
+
+        <h3>3. La polémica</h3>
+        <p>Las crónicas de Arendt desataron una tormenta de críticas, especialmente en las comunidades judías. Sus críticos le acusaron de relativizar la monstruosidad de Eichmann, de implicar que las víctimas eran en parte responsables de su propio exterminio (por los Consejos Judíos que colaboraron con los nazis), y de mostrar una frialdad inaceptable ante el sufrimiento del pueblo judío.</p>
+        <p>Arendt respondió que sus críticos confundían la descripción con la justificación: explicar por qué alguien actúa de una manera no es exculparlo. Y señaló que precisamente porque Eichmann fue un ser humano normal —y no un monstruo— su responsabilidad era plena y su condena a muerte correcta: si hubiera sido un monstruo, no podría haber elegido actuar de otro modo.</p>
+
+        <div class="thinker-card">
+            <h4>¿Era Eichmann un simple «seguidor de órdenes»?</h4>
+            <p>Investigaciones históricas posteriores (especialmente la de Bettina Stangneth, <em>Eichmann antes de Jerusalén</em>, 2011) han mostrado que Eichmann era más ideológicamente antisemita de lo que Arendt creyó, y que su papel en el juicio fue en parte una actuación calculada. Esto complica la tesis de la banalidad sin invalidarla completamente: el mecanismo de la irreflexión burocrática que Arendt describe sigue siendo real, aunque Eichmann fuera un ejemplo más ideológico de lo que ella percibió.</p>
+        </div>
+
+        <h3>4. Pensar, juzgar y la responsabilidad personal</h3>
+        <p>Las reflexiones sobre Eichmann llevan a Arendt hacia una filosofía del <strong>pensamiento y el juicio</strong> que ocupa sus últimas obras, especialmente la inacabada <em>La vida del espíritu</em>. Si la ausencia de pensamiento fue la condición del mal banal, entonces la actividad de <strong>pensar</strong> —preguntarse, examinar, poner a prueba los propios supuestos— es la primera defensa moral contra ese tipo de mal.</p>
+        <p>Pero el pensamiento solo no basta: también se necesita la capacidad de <strong>juzgar</strong>. Juzgar significa aplicar principios generales a casos concretos particulares, y hacerlo desde el punto de vista de todos los afectados. Es lo que Arendt, retomando a Kant, llama <strong>pensamiento ampliado</strong>: la capacidad de pensar desde el lugar del otro, que es la condición del juicio moral y político genuino. Eichmann nunca pensó desde el lugar de sus víctimas. Y esa incapacidad fue su crimen más profundo.</p>
+
+        <div class="highlight-box">
+            <strong>La lección moral de la banalidad del mal:</strong> El mal no requiere de monstruos. Requiere de personas que dejan de pensar por sí mismas, de juzgar por sí mismas, de preguntarse qué están haciendo y a quiénes afecta. La responsabilidad moral no puede delegarse en las instituciones, en la obediencia o en «lo que todo el mundo hace». Pensar —en sentido profundo, crítico, empático— es un acto moral.
+        </div>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════════ -->
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function openModal(id) {
+    const overlay = document.getElementById(id);
+    overlay.style.display = 'flex';
+    requestAnimationFrame(() => overlay.classList.add('active'));
+    document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+    const overlay = document.getElementById(id);
+    const box = overlay.querySelector('.modal-box');
+    box.classList.remove('fullscreen');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => { overlay.style.display = 'none'; }, 300);
+}
+function toggleFullscreen(btn) {
+    const box = btn.closest('.modal-box');
+    box.classList.toggle('fullscreen');
+    const isFS = box.classList.contains('fullscreen');
+    btn.innerHTML = isFS
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>';
+    btn.title = isFS ? 'Salir de pantalla completa' : 'Pantalla completa';
+}
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(overlay.id); });
+});
+function openPage(id) {
+    const page = document.getElementById(id);
+    page.style.display = 'block';
+    requestAnimationFrame(() => page.classList.add('active'));
+    document.body.style.overflow = 'hidden';
+    page.scrollTop = 0;
+}
+function closePage(id) {
+    const page = document.getElementById(id);
+    page.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => { page.style.display = 'none'; }, 300);
+}
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+        document.querySelectorAll('.page-overlay.active').forEach(p => closePage(p.id));
+    }
+});
+</script>
+</body>
+</html>
